@@ -16,8 +16,8 @@ body{
 }
 
 .header{
-    margin: 0 60px;
-    padding: 25px 0;
+    margin: 0 80px;
+    padding: 0 0 25px 0;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -26,36 +26,75 @@ body{
 .menu{
     display: flex;
     list-style-type: none;
+    margin: 30px 0;
 }
 
 .menu__item{
     text-transform: uppercase;
-    padding: 0 45px;
     font-weight: lighter;
+    margin: 10px 30px;
 }
 
 .menu__link{
     text-decoration: none; 
-    color: white;  
+    color: white; 
 }    
 
 .menu__link:hover,
 .menu__link:focus{
-    text-decoration: underline;
-    color: #000; 
+    border-bottom: 1px solid #fff; 
+
 }
 
 .product-card__main{
-    margin: 0 60px;
+    margin: 0 80px;
+    padding: 15px 0 100px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
 }
 
+/* start left block */
+
 .product-card__canvas{
+    background-image: url(../images/snickers1.png);
+    background-size: cover;
+    background-position: center;
     width: 70%;
+    height: 35em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -30px 0px 5px -15px rgba(178,174,192,0.6), 
+    -60px 0px 5px -30px rgba(178,174,192,0.5);
 }
+
+.product-card__zoom{
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+}
+
+.product-card__list{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    margin: 0;
+}
+
+.product-card__list-items{
+    list-style-type: none; 
+    padding: 0 10px;
+}
+
+/* end left block */
+
+/* start right block */
 
 .product-card__info{
     width: 30%;
+    background-color: #fff;
+    box-shadow: 30px 0px 5px -15px rgba(178,174,192,0.6), 
+    60px 0px 5px -30px rgba(178,174,192,0.5);
 }
+
+/* end right block */
