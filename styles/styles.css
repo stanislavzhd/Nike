@@ -43,8 +43,44 @@ body{
 .menu__link:hover,
 .menu__link:focus{
     border-bottom: 1px solid #fff; 
-
 }
+
+.menu__burger{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.burger__line,
+.burger__line::before,
+.burger__line::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.burger__line::before,
+.burger__line::after{
+    content: "";
+}
+
+.burger__line::before{
+    transform: translateY(-5px);
+}
+
+.burger__line::after{
+    transform: translateY(5px);
+}
+
+
+/* start left block */
 
 .product-card__main{
     margin: 0 80px;
@@ -52,20 +88,22 @@ body{
     display: flex;
 }
 
-/* start left block */
-
 .product-card__canvas{
-    background-image: url(../images/snickers1.png);
-    background-size: cover;
-    background-position: center;
     width: 70%;
     height: 35em;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: -30px 0px 5px -15px rgba(178,174,192,0.6), 
-    -60px 0px 5px -30px rgba(178,174,192,0.5);
+    box-shadow: -30px 0px 0px -15px rgba(178,174,192,0.6), 
+    -60px 0px 0px -30px rgba(178,174,192,0.5);
+}
+
+.image{
+    max-width: 100%;
+    width: 760px;
+    height: 560px;
+    object-fit: cover;
 }
 
 .product-card__zoom{
@@ -93,8 +131,155 @@ body{
 .product-card__info{
     width: 30%;
     background-color: #fff;
-    box-shadow: 30px 0px 5px -15px rgba(178,174,192,0.6), 
-    60px 0px 5px -30px rgba(178,174,192,0.5);
+    box-shadow: 30px 0px 0px -15px rgba(178,174,192,0.6), 
+    60px 0px 0px -30px rgba(178,174,192,0.5);
+    padding: 30px;
+}
+
+.product-card__badge{
+    color: #fff;
+    text-transform: uppercase; 
+    background-color: #ffa60d;
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.product-card__title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+a{
+    color: #5e4fff;
+    text-decoration: none;
+}
+
+img{
+    object-fit: none;
+} 
+
+.product-card__stars{
+    display: flex;
+}
+
+.product-card__stars-title{
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.product-card__price{
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.product-card__size-title{
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.product-card__radio{
+    -webkit-appearance: none;
+    appearance: none;
+}   
+
+.product-card__size-radio{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20px;
+}
+
+.product-card__option1:after{
+    content: "7";
+    text-align: center;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.product-card__option2:after{
+    content: "8";
+    text-align: center;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.product-card__option3:after{
+    content: "9";
+    text-align: center;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.product-card__option4:after{
+    content: "10";
+    text-align: center;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.product-card__option5:after{
+    content: "11";
+    text-align: center;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.product-card__radio:checked + .product-card__option1:after{
+    border: 1px solid black;
+}
+
+.product-card__radio:checked + .product-card__option2:after{
+    border: 1px solid black;
+}
+
+.product-card__radio:checked + .product-card__option3:after{
+    border: 1px solid black;
+}
+
+.product-card__radio:checked + .product-card__option4:after{
+    border: 1px solid black;
+}
+
+.product-card__radio:checked + .product-card__option5:after{
+    border: 1px solid black;
+}
+
+.button1{
+    width: 60%;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #a200b8;
+    padding: 10px 0;
+    border: none;
+    margin: 45px 0 5px 0;
+}
+
+.button1:hover,
+.button1:focus{
+    background-color: #20468c;
+}
+
+.button2{
+    width: 60%;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #000; 
+    font-weight: bold;
+}
+
+.button2:hover,
+.button2:focus{
+    background-color: #20468c;
+    color: #fff;
 }
 
 /* end right block */
